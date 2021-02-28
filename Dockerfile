@@ -30,10 +30,6 @@ COPY --from=builder /usr/src/mkp224o/mkp224o /usr/bin/mkp224o
 RUN apk --no-cache add libsodium
 
 WORKDIR /tmp
-# WORKDIR /usr/bin
-# ENTRYPOINT ["/usr/bin/mkp224o -f ./wordlist.txt -d ./results -t ${CORE_COUNT} -s -v"]
-# ENTRYPOINT ["/usr/bin/mkp224o abcd -d /usr/bin/mkp224o/results -t ${CORE_COUNT} -s -v"]
-# ENTRYPOINT ["/usr/bin/mkp224o"]
 
 ENTRYPOINT ["/usr/bin/mkp224o"]
-CMD ["-f","/wordlist.txt","-d","/results","-t","${CORE_COUNT}","-s","-v"]
+CMD ["-f","/wordlist.txt","-d","/results","-s","-v"]
