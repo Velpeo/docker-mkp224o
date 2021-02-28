@@ -10,4 +10,4 @@
 
 ### To use, run:
 
-``docker run --rm -v `pwd`/results:/results velpeo/mkp224o``
+``docker run --rm -it -v `pwd`/results:/results -v `pwd`/wordlist.txt:/wordlist.txt velpeo/mkp224o``
