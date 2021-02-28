@@ -5,8 +5,19 @@ formely known as proposal 224) onion addresses.
 
 ## To use, run:
 
+Edit ``wordlist.txt`` to add desired filters for tor urls 
 ``nano wordlist.txt``
-``docker run --rm -it -v `pwd`/results:/results -v `pwd`/wordlist.txt:/wordlist.txt velpeo/mkp224o``
+
+Run docker container with newly edited ``wordlist.txt`` interactively
+
+``docker run -it -v `pwd`/results:/results -v `pwd`/wordlist.txt:/wordlist.txt velpeo/mkp224o``
+
+- OR -
+- 
+Run docker container detach
+
+``docker run -d -v `pwd`/results:/results -v `pwd`/wordlist.txt:/wordlist.txt velpeo/mkp224o``
+
 
 
 ### Requirements
